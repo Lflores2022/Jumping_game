@@ -24,19 +24,14 @@ public class GameManager : MonoBehaviour
         bestScore = PlayerPrefs.GetInt("HighScore");
     }
 
-   public void NextLevel()
+    public void NextLevel()
     {
-        currentLevel++;
-        FindObjectOfType<BallController>().ResetBall();
         Debug.Log("Pasamos de Nivel");
-    
     }
 
     public void RestartLevel()
     {
-        Debug.Log("Restart");
-        singleton.currentScore = 0;
-        FindObjectOfType<BallController>().ResetBall();
+
     }
 
     public void AddScore(int scoreToAdd)
